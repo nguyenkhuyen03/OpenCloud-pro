@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.133.1">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/OpenCloud-pro/images/favicon.png" type="image/png">
+
+    <title>OpenCloud with S3 :: OpenCloud</title>
+
+    
+    <link href="/OpenCloud-pro/css/nucleus.css?1742036488" rel="stylesheet">
+    <link href="/OpenCloud-pro/css/fontawesome-all.min.css?1742036488" rel="stylesheet">
+    <link href="/OpenCloud-pro/css/hybrid.css?1742036488" rel="stylesheet">
+    <link href="/OpenCloud-pro/css/featherlight.min.css?1742036488" rel="stylesheet">
+    <link href="/OpenCloud-pro/css/perfect-scrollbar.min.css?1742036488" rel="stylesheet">
+    <link href="/OpenCloud-pro/css/auto-complete.css?1742036488" rel="stylesheet">
+    <link href="/OpenCloud-pro/css/atom-one-dark-reasonable.css?1742036488" rel="stylesheet">
+    <link href="/OpenCloud-pro/css/theme.css?1742036488" rel="stylesheet">
+    <link href="/OpenCloud-pro/css/hugo-theme.css?1742036488" rel="stylesheet">
+    
+    <link href="/OpenCloud-pro/css/theme-workshop.css?1742036488" rel="stylesheet">
+    
+    
+
+    <script src="/OpenCloud-pro/js/jquery-3.3.1.min.js?1742036488"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/OpenCloud-pro/2-opencloud_with_s3/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+  <svg xmlns="http://www.w3.org/2000/svg" 
+       viewBox="0 0 300 120" 
+       width="50%"
+       style="enable-background:new 0 0 300 120;">
+    
+    <defs>
+      <linearGradient id="skyBlue" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#6CB4EE"/>
+        <stop offset="100%" stop-color="#0047AB"/>
+      </linearGradient>
+    </defs>
+
+    
+    <rect width="100%" height="100%" fill="url(#skyBlue)" rx="15"/>
+
+    
+    <text x="50%" 
+          y="60%" 
+          font-family="'Segoe UI', Arial, sans-serif" 
+          font-size="42" 
+          fill="white" 
+          text-anchor="middle" 
+          style="letter-spacing: 2px;
+                 font-weight: 600;
+                 text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+                 font-variant: small-caps;">
+      OpenCloud
+    </text>
+  </svg>
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/OpenCloud-pro/js/lunr.min.js?1742036488"></script>
+<script type="text/javascript" src="/OpenCloud-pro/js/auto-complete.js?1742036488"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/nguyenkhuyen03.github.io\/OpenCloud-pro\/";
+    
+</script>
+<script type="text/javascript" src="/OpenCloud-pro/js/search.js?1742036488"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/OpenCloud-pro/1-introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/OpenCloud-pro/1-introduction/">
+          <b>1. </b>Introduction
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/OpenCloud-pro/2-opencloud_with_s3/" title="OpenCloud with S3" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/OpenCloud-pro/2-opencloud_with_s3/">
+          <b>2. </b>OpenCloud with S3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://opencloud.eu/en"><i class='fas fa-globe'></i> OpenCloud</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="https://nguyenkhuyen03.github.io/OpenCloud-pro/2-opencloud_with_s3/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="https://nguyenkhuyen03.github.io/OpenCloud-pro/vi/2-opencloud_with_s3/">Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Blog </b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830891&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://opencloud.eu/en"> OpenCloud </a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="OpenCloud" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Ngày sinh </b> <br>
+        <i><font color=orange>26-01-2003</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Author </b> <br>
+           
+            <i>
+                <a href="https://opencloud.eu/en"  style="color:orange">Nguyễn Khuyến</a>
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/OpenCloud-pro/'>Opencloud</a> > OpenCloud with S3
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#i-tải-công-cụ-s3cmd">I. Tải công cụ s3cmd</a>
+      <ul>
+        <li><a href="#1-cài-đặt-s3cmd">1. Cài đặt s3cmd</a></li>
+        <li><a href="#2-cấu-hình-s3cmd">2. Cấu hình s3cmd</a></li>
+      </ul>
+    </li>
+    <li><a href="#ii-cấu-hình-tích-hợp-với-s3">II. Cấu hình tích hợp với S3</a>
+      <ul>
+        <li><a href="#1-download">1. Download</a></li>
+        <li><a href="#2-cấu-hình">2. Cấu hình</a></li>
+      </ul>
+    </li>
+    <li><a href="#iii-thử-nghiệm">III. Thử nghiệm</a>
+      <ul>
+        <li><a href="#1-tạo-file-trên-opencloud">1. Tạo file trên OpenCloud</a></li>
+        <li><a href="#2-kiểm-tra-trong-s3">2. Kiểm tra trong S3</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              OpenCloud with S3
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="i-tải-công-cụ-s3cmd">I. Tải công cụ s3cmd</h2>
+<p><strong>s3cmd</strong> là một công cụ dòng lệnh giúp thao tác với <strong>S3 Storage</strong> dễ dàng hơn.</p>
+<h3 id="1-cài-đặt-s3cmd">1. Cài đặt s3cmd</h3>
+<pre tabindex="0"><code>sudo apt update
+sudo apt install s3cmd -y
+</code></pre><h3 id="2-cấu-hình-s3cmd">2. Cấu hình s3cmd</h3>
+<p><strong>Chạy lệnh sau để thiết lập:</strong></p>
+<pre tabindex="0"><code>s3cmd --configure
+</code></pre><p><strong>Nhập:</strong></p>
+<pre tabindex="0"><code>Enter new values or accept defaults in brackets with Enter.
+Refer to user manual for detailed description of all options.
+
+Access key and Secret key are your identifiers for Amazon S3. Leave them empty for using the env variables.
+Access Key: 
+Secret Key: 
+Default Region [US]:           
+Use &#34;s3.amazonaws.com&#34; for S3 Endpoint and not modify it to the target Amazon S3.
+S3 Endpoint [s3.amazonaws.com]: 
+
+Use &#34;%(bucket)s.s3.amazonaws.com&#34; to the target Amazon S3. &#34;%(bucket)s&#34; and &#34;%(location)s&#34; vars can be used
+if the target S3 system supports dns based buckets.
+DNS-style bucket+hostname:port template for accessing a bucket [%(bucket)s.s3.amazonaws.com]: 
+
+Encryption password is used to protect your files from reading
+by unauthorized persons while in transfer to S3
+Encryption password: 
+Path to GPG program [/usr/bin/gpg]: 
+
+When using secure HTTPS protocol all communication with Amazon S3
+servers is protected from 3rd party eavesdropping. This method is
+slower than plain HTTP, and can only be proxied with Python 2.7 or newer
+Use HTTPS protocol [Yes]: Yes
+
+On some networks all internet access must go through a HTTP proxy.
+Try setting it here if you can&#39;t connect to S3 directly
+HTTP Proxy server name: 
+
+Test access with supplied credentials? [Y/n] Y
+Please wait, attempting to list all buckets...
+Success. Your access key and secret key worked fine :-)
+
+Now verifying that encryption works...
+Not configured. Never mind.
+
+Save settings? [y/N] y
+Configuration saved to &#39;/root/.s3cfg&#39;
+</code></pre><h2 id="ii-cấu-hình-tích-hợp-với-s3">II. Cấu hình tích hợp với S3</h2>
+<h3 id="1-download">1. Download</h3>
+<pre tabindex="0"><code>git clone https://github.com/opencloud-eu/opencloud.git
+</code></pre><h3 id="2-cấu-hình">2. Cấu hình</h3>
+<h4 id="21-di-chuyển-đến-thư-mục-chứa-các-file-cấu-hình">2.1. Di chuyển đến thư mục chứa các file cấu hình</h4>
+<pre tabindex="0"><code>cd opencloud/deployments/examples/opencloud_full
+</code></pre><h4 id="22-chỉnh-sửa-file-chứa-biến-môi-trường">2.2. Chỉnh sửa file chứa biến môi trường</h4>
+<pre tabindex="0"><code>vi .env
+</code></pre><pre tabindex="0"><code>DECOMPOSEDS3=:decomposeds3.yml
+# Configure the S3 storage endpoint. Defaults to &#34;http://minio:9000&#34; for testing purposes.
+DECOMPOSEDS3_ENDPOINT=
+# S3 region. Defaults to &#34;default&#34;.
+DECOMPOSEDS3_REGION=
+# S3 access key. Defaults to &#34;opencloud&#34;
+DECOMPOSEDS3_ACCESS_KEY=
+# S3 secret. Defaults to &#34;opencloud-secret-key&#34;
+DECOMPOSEDS3_SECRET_KEY=
+# S3 bucket. Defaults to &#34;opencloud&#34;
+DECOMPOSEDS3_BUCKET=
+#
+# For testing purposes, add local minio S3 storage to the docker-compose file.
+# The leading colon is required to enable the service.
+#DECOMPOSEDS3_MINIO=:minio.yml
+</code></pre><ul>
+<li>Trong trường hợp này ta không sử dụng MiniO nên bỏ dòng <strong>DECOMPOSEDS3_MINIO=:minio.yml</strong></li>
+</ul>
+<h4 id="23-run">2.3. Run</h4>
+<pre tabindex="0"><code>docker compose up -d
+</code></pre><h2 id="iii-thử-nghiệm">III. Thử nghiệm</h2>
+<h3 id="1-tạo-file-trên-opencloud">1. Tạo file trên OpenCloud</h3>
+<p><img src="/images/1-account-setup/OpenCloud.png"></p>
+<h3 id="2-kiểm-tra-trong-s3">2. Kiểm tra trong S3</h3>
+<pre tabindex="0"><code>root@hunght-ubuntu-nvme:~# s3cmd ls s3://hn-opencloud
+                          DIR  s3://hn-opencloud/a9f4cb7e-e3d4-4848-90d4-9c8e248942ae/
+</code></pre><ul>
+<li>
+<p>Ta sẽ thấy 1 folder mới đã được tạo ra.</p>
+</li>
+<li>
+<p>Kiểm tra trong folder này ta sẽ thấy nhiều folder con chứa các file data bị phân mảnh.</p>
+</li>
+</ul>
+<h4 id="success">Success</h4>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/OpenCloud-pro/1-introduction/" title="Introduction"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/OpenCloud-pro/1-introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/OpenCloud-pro/js/clipboard.min.js?1742036488"></script>
+    <script src="/OpenCloud-pro/js/perfect-scrollbar.min.js?1742036488"></script>
+    <script src="/OpenCloud-pro/js/perfect-scrollbar.jquery.min.js?1742036488"></script>
+    <script src="/OpenCloud-pro/js/jquery.sticky.js?1742036488"></script>
+    <script src="/OpenCloud-pro/js/featherlight.min.js?1742036488"></script>
+    <script src="/OpenCloud-pro/js/highlight.pack.js?1742036488"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/OpenCloud-pro/js/modernizr.custom-3.6.0.js?1742036488"></script>
+    <script src="/OpenCloud-pro/js/learn.js?1742036488"></script>
+    <script src="/OpenCloud-pro/js/hugo-learn.js?1742036488"></script>
+
+    <link href="/OpenCloud-pro/mermaid/mermaid.css?1742036488" rel="stylesheet" />
+    <script src="/OpenCloud-pro/mermaid/mermaid.js?1742036488"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
